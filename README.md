@@ -7,25 +7,24 @@ This project evaluates and tunes multiple regression models to predict house sal
 
 ## 📁 Project Structure
 <br>
-CelebalTechAssignmentWeek6 
-├── data/
-│ └── processed_train.csv # Cleaned dataset (features + target)
-├── model_train.py # Full pipeline script
-├── results/
-│ ├── metrics_summary.csv # Metrics from base models
-│ ├── tuned_metrics_summary.csv # Metrics from tuned models
-│ └── tuning_results.csv # Best parameters for each model
-├── visuals/
-│ ├── residuals_<model>.png # Residual histogram
-│ ├── actual_vs_predicted_<model>.png # Scatterplot of true vs predicted
-│ ├── r2_score_comparison.png # Barplot: R² of all models
-│ ├── rmse_comparison.png # Barplot: RMSE of all models
-│ └── best_model_confusion.png # Final highlight of best model
-├── house_modeling.ipynb # Jupyter notebook version with code & output
-├── requirements.txt # Required libraries
-├── LICENSE # MIT License
-└── README.md # This file
-</br>
+CelebalTechAssignmentWeek6 <br>
+├── data/ <br>
+│ └── processed_train.csv # Cleaned dataset (features + target) <br>
+├── model_train.py # Full pipeline script <br>
+├── results/ <br>
+│ ├── metrics_summary.csv # Metrics from base models <br>
+│ ├── tuned_metrics_summary.csv # Metrics from tuned models <br>
+│ └── tuning_results.csv # Best parameters for each model <br>
+├── visuals/<br>
+│ ├── residuals_<model>.png # Residual histogram<br>
+│ ├── actual_vs_predicted_<model>.png # Scatterplot of true vs predicted<br>
+│ ├── r2_score_comparison.png # Barplot: R² of all models<br>
+│ ├── rmse_comparison.png # Barplot: RMSE of all models<br>
+│ └── best_model_confusion.png # Final highlight of best model<br>
+├── house_modeling.ipynb # Jupyter notebook version with code & output<br>
+├── requirements.txt # Required libraries<br>
+├── LICENSE # MIT License<br>
+└── README.md # This file<br>
 ---
 
 
@@ -86,6 +85,18 @@ CelebalTechAssignmentWeek6
 
 ---
 
+## ⚙️ Hyperparameter Tuning Summary
+
+Each model was tuned using either `GridSearchCV` or `RandomizedSearchCV` to optimize performance. The best parameter combinations were recorded and evaluated again to assess their impact.
+
+### Saved Outputs
+
+| File                                | Description                                        |
+|-------------------------------------|----------------------------------------------------|
+| `results/tuning_results.csv`        | Best hyperparameters for each tuned model          |
+| `results/tuned_metrics_summary.csv`| Final metrics (R², RMSE, MAE) for all tuned models |
+
+These files allow easy comparison between base and optimized models. The tuning results can be used directly in future training pipelines or deployed systems.
 ---
 
 ## 🔍 Model Analysis
@@ -109,17 +120,17 @@ All models were trained and evaluated using consistent data and metrics. Based o
 
 The **XGBoost Regressor** emerged as the best-performing model based on:
 
-| Metric     | Value |
-|------------|-------|
-| R² Score   | *[your XGBoost R² value]*  
-| RMSE       | *[your XGBoost RMSE value]*  
-| MAE        | *[your XGBoost MAE value]*  
+| Metric     | Value              |
+|------------|--------------------|
+| R² Score   | 0.912628458        |
+| RMSE       | 25887.6075757712   |
+| MAE        | 15705.0353435359   |
 
 ### Visualization:
 
 | Visual                               | Description                              |
 |--------------------------------------|------------------------------------------|
-| `visuals/best_model_confusion.png`   | Actual vs Predicted plot for XGBoost     |
+| ![](`visuals/best_model_confusion.png`)   | Actual vs Predicted plot for XGBoost     |
 
 This plot shows how closely the model's predictions align with actual house prices. A well-aligned diagonal line indicates high accuracy and minimal bias.
 
