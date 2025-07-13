@@ -130,7 +130,7 @@ The **XGBoost Regressor** emerged as the best-performing model based on:
 
 | Visual                               | Description                              |
 |--------------------------------------|------------------------------------------|
-| ![](`visuals/best_model_confusion.png`)   | Actual vs Predicted plot for XGBoost     |
+| ![visuals/best_model_confusion.png](visuals/best_model_confusion.png)   | Actual vs Predicted plot for XGBoost     |
 
 This plot shows how closely the model's predictions align with actual house prices. A well-aligned diagonal line indicates high accuracy and minimal bias.
 
